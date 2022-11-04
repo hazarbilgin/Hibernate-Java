@@ -3,6 +3,7 @@ package com.javacourse.projject.hibernatevejpa.restApi;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,7 +21,9 @@ private ICityService cityService;
 	this.cityService = cityService;
 }	
 	@GetMapping("/cities")
-	public List<City> get(){
+	public List<city> get(){
+		System.out.println("sads");
+		System.out.println(cityService.GetAll());
 		return cityService.GetAll();
 	}
 }
